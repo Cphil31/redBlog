@@ -49,6 +49,8 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         $this->articles = new ArrayCollection();
     }
 
+    
+
     public function getId(): ?int
     {
         return $this->id;
@@ -141,6 +143,10 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     /**
      * @return Collection|Article[]
      */
+
+    /**
+     * @return Collection|Article[]
+     */
     public function getArticles(): Collection
     {
         return $this->articles;
@@ -167,4 +173,5 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
         return $this;
     }
+    
 }
